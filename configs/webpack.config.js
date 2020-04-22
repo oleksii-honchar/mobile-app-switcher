@@ -33,12 +33,15 @@ module.exports = (env) => {
   configs = configs.map((cfg) => webpackMerge(cfg, externalsCfg));
   configs = configs.map((cfg) => webpackMerge(cfg, resolveCfg));
 
+  // include core-js for es2015
+  configs[0].entry.app = [require.resolve('core-js/stable'), configs[0].entry.app[0]]
+
   if (env.BUILD_ANALYZE === 'true') {
     console.log('[config:webpack] bundle analyzer included');
 
-    configs = configs.map((cfg) => webpackMerge(cfg, {
+    configs[0] = webpackMerge(configs[0], {
       plugins: [ new BundleAnalyzerPlugin() ]
-    }));
+    });
   }
 
   if (process.env.NODE_ENV !== 'production') {

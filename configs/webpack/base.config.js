@@ -25,7 +25,7 @@ module.exports = (env) => {
       writeToDisk: true,
     },
     entry: {
-      app: [require.resolve('core-js/stable'), './src/index.js']
+      app: ['./src/index.js']
     },
     output: {
       path: path.join(__dirname, '../../dist'),
