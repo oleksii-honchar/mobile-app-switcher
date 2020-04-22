@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@containers/*": ["./src/containers/*"],
+      "@logger": ["./src/utils/logger.js"],
+      "@pages/*": ["./src/pages/*"],
+      "@screens/*": ["./src/screens/*"]
+    }
+  },
+  "exclude": ["dist", "node_modules", "build", "coverage"]
+}

@@ -1,0 +1,5 @@
+src/server/templates/scripts-head.html
+src/server/templates/scripts-head-external-header.html
+src/server/templates/scripts-body.html
+src/app/lib/AppMeasurement.js
+public/assets/js/AppMeasurement2.js

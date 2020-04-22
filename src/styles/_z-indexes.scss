@@ -1,0 +1,23 @@
+$z-index-base: 1000;
+
+$z-index-doubleclick: $z-index-base;
+$z-index-byline-container: $z-index-base + 10;
+$z-index-header-title-container: $z-index-base + 20;
+$z-index-subheader-base: $z-index-base + 75;
+$z-index-main-content: $z-index-base + 100;
+$z-index-main-menu: $z-index-base + 110;
+$z-index-primary-header-layer: $z-index-base + 250;
+$z-index-meter-banner: $z-index-base + 300;
+$z-index-inlay-banner: $z-index-base + 300;
+$z-index-sticky: $z-index-base + 400;
+$z-index-sticky-toolbar: $z-index-base + 402;
+$z-index-primary-header-base: $z-index-base + 403;
+$z-index-primary-navigation: $z-index-base + 410;
+$z-index-interstitial: $z-index-base + 450;
+$z-index-footer: $z-index-base + 475;
+$z-index-location-list: $z-index-base + 500;
+$z-index-main-logo: $z-index-base + 600;
+$z-index-primary-navigation-beta: $z-index-base + 800;
+$z-index-article-meter-banner: $z-index-base + 900;
+$z-index-static-components: $z-index-base + 1000;
+$z-index-loader: $z-index-base + 1100;

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="no-js">
+<head>
+  <title>Mobile App Switcher</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <base href="./">
+
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"
+  ></script>
+
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.{{scriptEnvSuffix}}.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.{{scriptEnvSuffix}}.js"></script>
+  <script crossorigin src="https://unpkg.com/moment@2.24.0"></script>
+</head>
+<body>
+  <div id="app-root"></div>
+  <script type="module" src="app.bundle.mjs"></script>
+  <script nomodule src="app.bundle.es5.js"></script>
+</body>
+</html>
