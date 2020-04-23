@@ -4,7 +4,7 @@ module.exports = {
   setupFiles: [
     '<rootDir>/node_modules/regenerator-runtime/runtime',
     '<rootDir>/configs/polyfills.js',
-    '<rootDir>/configs/jest/setup.js',
+    '<rootDir>/configs/jest/setup-jest.js',
   ],
   testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).{js,jsx,mjs,ts,tsx}'],
   testEnvironment: 'node',

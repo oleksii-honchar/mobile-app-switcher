@@ -17,8 +17,7 @@ module.exports = (env) => {
           options: {
             cacheDirectory: true,
             cacheCompression: process.env.NODE_ENV === 'production',
-            compact: process.env.NODE_ENV === 'production',
-            configFile: path.join(__dirname, '../babel.config.js')
+            compact: process.env.NODE_ENV === 'production'
           },
           exclude: [
             /\.(spec|e2e|d)\.[tj]sx?$/,
