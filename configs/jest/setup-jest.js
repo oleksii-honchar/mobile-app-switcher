@@ -1,0 +1,1 @@
+// deprecated enzyme bootstrap was here. Removed in a flavor of react-testing-library
