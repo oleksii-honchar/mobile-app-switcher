@@ -16,8 +16,12 @@ module.exports = {
     alias: {
       '@components': resolve('src/components'),
       '@containers': resolve('src/containers'),
-      '@pages': resolve('src/pages'),
+      '@contexts': resolve('src/reducers'),
       '@logger': resolve('src/utils/logger.js'),
+      '@pages': resolve('src/pages'),
+      '@providers': resolve('src/providers'),
+      '@reducers': resolve('src/reducers'),
+      '@utils': resolve('src/utils'),
     }
   }
 }

@@ -1,0 +1,111 @@
+@import 'foundation-settings';
+@import 'variables';
+@import 'z-indexes';
+
+@keyframes revealMasPopup {
+  from {
+    bottom: -400px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+.o-mas-popup {
+  z-index: $z-index-mobile-application-switcher;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: revealMasPopup 0.5s ease-out;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.c-mas-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 62px;
+  font-size: 19px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #333333;
+  background-color: #ffffff;
+  border-radius: 15px 15px 0 0;
+  border-bottom: solid 1px #d8d8d8;
+
+  .c-mas-header__text {
+    align-self: center;
+  }
+}
+
+.o-mas-links {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  min-height: 130px;
+
+  .c-mas-app-link {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .c-mas-app-link__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 7px;
+      border: solid 1px #d8d8d8;
+      margin-left: 20px;
+      margin-right: $content-gutter-sm;
+    }
+    .c-mas-app-link__title {
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #333333;
+      margin-right: $content-gutter-sm;
+      align-self: center;
+      flex-grow: 1;
+      max-width: 300px;
+    }
+    .c-mas-app-link__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      width: 104px;
+      height: 44px;
+      border-radius: 5px;
+      background-color: #0072bc;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: #ffffff;
+    }
+  }
+}
+
+/////////////////////////////////
+// breakpoints
+/////////////////////////////////
+
+// mobile: 375 ->
+@media #{$screen} and (min-width: $xsmall-upper-breakpoint) {
+  .c-mas-header__text {
+    font-size: 20px;
+  }
+}

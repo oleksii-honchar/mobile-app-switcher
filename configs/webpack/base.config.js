@@ -24,7 +24,9 @@ module.exports = (env) => {
       writeToDisk: true,
     },
     entry: {
-      app: ['./src/index.js']
+      app: ['./src/index.js'],
+      'mas-vanilla': ['./src/components/MasVanilla/mas-vanilla.js'],
+      'mas-vanilla-one': ['./src/components/MasVanillaOne/mas-vanilla-one.js']
     },
     output: {
       path: path.join(__dirname, '../../dist'),

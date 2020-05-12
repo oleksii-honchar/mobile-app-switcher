@@ -1,0 +1,79 @@
+@import 'foundation-settings';
+@import 'variables';
+@import 'z-indexes';
+
+@keyframes revealMasAlert {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.o-mas-alert {
+  z-index: $z-index-mobile-application-switcher;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: revealMasAlert 0.5s ease-out;
+
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+
+  width: 200px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -(100px + 20px);
+
+  &--closed {
+    display: none;
+  }
+
+  &__text {
+    color: #333333;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    margin-bottom: $content-gutter-sm;
+  }
+
+  &__ok {
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #0072bc;
+    align-self: flex-end;
+  }
+}
+
+/////////////////////////////////
+// breakpoints
+/////////////////////////////////
+
+// mobile: 375 -> 479
+@media #{$screen} and (min-width: $xsmall-upper-breakpoint) and (max-width: #{$largest-phone-size - 1}) {
+  .o-mas-alert {
+    width: 250px;
+    margin-left: -(125px + 20px);
+  }
+}
+
+@media #{$screen} and (min-width: $largest-phone-size)  {
+  .o-mas-alert {
+    width: 374px;
+    margin-left: -(187px + 20px);
+  }
+}

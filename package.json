@@ -13,10 +13,13 @@
     "cm": "npx git-cz",
     "check:all": "npm run lint:fix",
     "clean:dist": "rm -rf dist",
+    "deploy:s3": "bash scripts/deploy-to-s3.sh",
     "launch:loc": "npm run launch:dev-server",
     "launch:dev-server": "bash ./scripts/launch.dev-server.sh",
     "lint": "npx eslint src --config eslint.config.js  --ext .js,.jsx,.ts,.tsx,.json --ignore-pattern '/node_modules/*' --ignore-pattern '**/*.test.js' --ignore-pattern '/src/assets/**'",
     "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier --config .prettierrc -c",
+    "prettier:fix": "pretty-quick --staged",
     "start": "npm run launch:loc",
     "test": "cross-env-shell TASK_SITE_NAME=thestar TASK_ENVIRONMENT=localhost node scripts/run-tests.js --env=jsdom --colors",
     "test:coverage": "cross-env TASK_SITE_NAME=thestar TASK_ENVIRONMENT=localhost node scripts/run-tests.js --env=jsdom --colors --coverage",
@@ -26,7 +29,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "run-p lint:fix prettier:fix"
     }
   },
   "config": {
@@ -88,6 +91,8 @@
     "handlebars": "4.7.6",
     "husky": "4.2.3",
     "jest": "24.8.0",
+    "jquery": "^3.5.0",
+    "js-cookie": "^2.2.1",
     "lodash": "4.17.15",
     "lodash-webpack-plugin": "0.11.5",
     "node-sass-chokidar": "1.4.0",
@@ -96,7 +101,7 @@
     "postcss-loader": "3.0.0",
     "postcss-preset-env": "6.7.0",
     "prettier": "1.18.2",
-    "pretty-quick": "1.11.1",
+    "pretty-quick": "^1.11.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "rimraf": "3.0.2",

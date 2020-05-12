@@ -76,7 +76,7 @@ module.exports = (env) => {
             {
               loader: 'css-loader',
               options: {
-                modules: true,
+                modules: false,
                 importLoaders: 1,
               },
             },

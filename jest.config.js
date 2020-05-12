@@ -19,7 +19,7 @@ module.exports = {
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx|mjs)$',
   ],
   moduleNameMapper: {
-    '@(components|contexts|containers|globals|pages|utils)/(.*)$':
+    '@(components|contexts|containers|reducers|pages|utils)/(.*)$':
       '<rootDir>/src/$1/$2',
     '@logger': '<rootDir>/src/utils/logger.js',
   },

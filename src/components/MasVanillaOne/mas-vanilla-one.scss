@@ -1,0 +1,320 @@
+$screen: 'only screen';
+$xsmall-breakpoint: 320px;
+$xsmall-upper-breakpoint: 375px;
+$largest-phone-size: 480px;
+
+$mas-vanilla-alert-width: 374px;
+$mas-vanilla-alert-height: 114px;
+$content-gutter-sm: 16px;
+$z-index-mobile-application-switcher: 2100;
+
+// MobileApplicationSwitcher
+// -------------------------
+
+@keyframes revealMasVanillaOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.o-mas-vanilla {
+  z-index: $z-index-mobile-application-switcher;
+  display: flex;
+  align-items: center;
+  font-family: 'MerriweatherSans', Helvetica, Arial;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.c-mas-vanilla-overlay {
+  z-index: $z-index-mobile-application-switcher;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(#000000, 0.55);
+  animation: revealMasVanillaOverlay 0.5s ease-out;
+}
+
+// MAS Popup
+// -------------------------
+
+@keyframes revealMasVanillaPopup {
+  from {
+    bottom: -400px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+.o-mas-vanilla-popup {
+  z-index: $z-index-mobile-application-switcher;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: revealMasVanillaPopup 0.5s ease-out;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.c-mas-vanilla-header {
+  display: flex;
+  justify-content: center;
+  height: 62px;
+  font-size: 19px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333333;
+  background-color: #ffffff;
+  border-radius: 15px 15px 0 0;
+  border-bottom: solid 1px #d8d8d8;
+
+  .c-mas-vanilla-header__text {
+    align-self: center;
+  }
+}
+
+.o-mas-vanilla-links {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  min-height: 130px;
+
+  .c-mas-app-link {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .c-mas-app-link__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 7px;
+      border: solid 1px #d8d8d8;
+      margin-left: 20px;
+      margin-right: $content-gutter-sm;
+    }
+    .c-mas-app-link__title {
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #333333;
+      margin-right: $content-gutter-sm;
+      align-self: center;
+      flex-grow: 1;
+      max-width: 300px;
+    }
+    .c-mas-app-link__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      width: 104px;
+      height: 44px;
+      border-radius: 5px;
+      background-color: #0072bc;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+}
+
+/////////////////////////////////
+// breakpoints
+/////////////////////////////////
+
+// mobile: 375 ->
+@media #{$screen} and (min-width: $xsmall-upper-breakpoint) {
+  .c-mas-vanilla-header__text {
+    font-size: 20px;
+  }
+}
+
+// MAS Alert
+// -------------------------
+
+@keyframes revealMasVanillaAlert {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.o-mas-vanilla-alert {
+  z-index: $z-index-mobile-application-switcher;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: revealMasVanillaAlert 0.5s ease-out;
+
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+
+  width: 200px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -(100px + 20px);
+
+  &--closed {
+    display: none;
+  }
+
+  &__text {
+    color: #333333;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    margin-bottom: $content-gutter-sm;
+  }
+
+  &__ok {
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #0072bc;
+    align-self: flex-end;
+  }
+}
+
+/////////////////////////////////
+// breakpoints
+/////////////////////////////////
+
+// mobile: 375 -> 479
+@media #{$screen} and (min-width: $xsmall-upper-breakpoint) and (max-width: #{$largest-phone-size - 1}) {
+  .o-mas-vanilla-alert {
+    width: 250px;
+    margin-left: -(125px + 20px);
+  }
+}
+
+@media #{$screen} and (min-width: $largest-phone-size)  {
+  .o-mas-vanilla-alert {
+    width: 374px;
+    margin-left: -(187px + 20px);
+  }
+}
+
+// MAS DefaultChoicePopup
+// -------------------------
+
+@keyframes revealMasVanillaDefaultChoiceAlert {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.o-mas-vanilla-default-choice-alert {
+  z-index: $z-index-mobile-application-switcher;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: revealMasVanillaDefaultChoiceAlert 0.5s ease-out;
+
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+
+  width: 200px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -(100px + 20px);
+
+  &--closed {
+    display: none;
+  }
+
+  &__text {
+    color: #333333;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 104px;
+    height: 44px;
+    border-radius: 5px;
+    background-color: #0072bc;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+    cursor: pointer;
+
+    align-self: center;
+  }
+}
+
+/////////////////////////////////
+// breakpoints
+/////////////////////////////////
+
+// mobile: 375 -> 479
+@media #{$screen} and (min-width: $xsmall-upper-breakpoint) and (max-width: #{$largest-phone-size - 1}) {
+  .o-mas-vanilla-default-choice-alert {
+    width: 250px;
+    margin-left: -(125px + 20px);
+  }
+}
+
+@media #{$screen} and (min-width: $largest-phone-size)  {
+  .o-mas-vanilla-default-choice-alert {
+    width: 374px;
+    margin-left: -(187px + 20px);
+  }
+}

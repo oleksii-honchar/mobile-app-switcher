@@ -1,0 +1,16 @@
+.o-mas-switch-bar {
+  width: 100%;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0;
+
+  .o-mas-btn {
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 3px;
+    background-color: #0072bc;
+    color: #f6f6f6;
+  }
+}

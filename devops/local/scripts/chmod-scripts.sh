@@ -26,7 +26,7 @@ printf "${LBLUE}Gonna make all this scripts executable ...${NC}\n";
 currDir="$(pwd)"
 printf "Base dir: $currDir\n";
 
-chmodFile devops/local/scripts/load-env.sh
+chmodFile devops/local/scripts/load-project-env.sh
 chmodFile devops/local/scripts/check-env-vars.sh
 
 printf "${LBLUE}Done${NC}\n";

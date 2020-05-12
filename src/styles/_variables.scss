@@ -1,54 +1,5 @@
-@import './z-indexes';
-
-// Variables
-// Use maps only when needed
-// See foundation-settings for additional variables
-// Naming: property-component-modifier
-// ---------------------------------------
-
-// New article gutter widths
 $layout-gutter-sm: 32px;
 $layout-gutter-md: 14.5vw; // based on (column + gutters)/width ratio in designs
 $layout-gutter-lg: 88px;
 $layout-gutter-xl: 176px;
 $content-gutter-sm: 16px;
-
-$content-full-width-offset: 216px;
-
-// New article container widths
-$layout-rightrail-width: 328px;
-$layout-body-width: 1032px;
-$layout-content-width: 592px;
-
-// Colours
-$colour-brand-primary: #0062a1;
-$colour-brand-primary-deep: #00548b;
-$colour-brand-secondary: #0065a4;
-$colour-brand-light: #64cdf5;
-$rbga-colour-brand-light: rgba(100, 205, 245, 0.45);
-$colour-brand-dark: #1c6e8c;
-$colour-brand-red: #f71600;
-$colour-brand-blue: #0072bc;
-$colour-brand-blue-dark: #00548b;
-$colour-brand-orange: #ff5724;
-$colour-brand-orange-dark: #db3300;
-$colour-white: #fff;
-$colour-offwhite: #fafafa;
-$colour-black: #000;
-$colour-gray-light: #eff1f2;
-$colour-gray-medium-light: #ccc;
-$colour-gray-medium: #737373;
-$colour-gray-dark: #404040;
-$colour-gray-darker: #262626;
-$colour-dark-red: #b40404;
-$colour-input-error-bg: #ffd9d9;
-$colour-smoke-white: #f8f8f8;
-$colour-light-black: #333;
-$colour-light-white: #f6f6f6;
-$colour-light-gray: #c2c2c2;
-$colour-almost-black: #202020;
-$colour-charcoal: #333;
-$colour-subnav-gray: #ecebec;
-$colour-sponsor-beige: #fbf2e4;
-$colour-green: #25833d;
-$colour-link-visited: #663366;
